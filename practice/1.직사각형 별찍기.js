@@ -3,7 +3,6 @@
 n과 m은 각각 1000이하인 자연수 입니다.
 
 
-
 process.stdin.setEncoding('utf8');
 process.stdin.on('data', data => {
     const n = data.split(" ");
