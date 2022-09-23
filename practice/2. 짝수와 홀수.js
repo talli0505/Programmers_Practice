@@ -2,6 +2,7 @@
 num은 int범위의 정수입니다.
 0은 짝수입니다.
 
+
 function solution(num) {
   var answer = '';    // 값을 받을 변수
   if(num % 2 == 0) {  // 2로 나눴을 때 0이라면
