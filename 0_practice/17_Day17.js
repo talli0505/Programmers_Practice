@@ -33,3 +33,6 @@ function solution(n, numlist) {
 function solution(n) {
   return n.toString().split("").reduce((a,b) => a += Number(b), 0)
 }
+
+
+출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
