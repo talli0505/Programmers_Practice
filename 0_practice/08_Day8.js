@@ -36,5 +36,12 @@ function solution(n) {
   return answer
 }
 
+4. 진료순서 정하기
+
+
+function solution(emergency) {
+  let sortedArr = emergency.slice().sort((a,b)=>b-a); // 얕은 복사
+  return emergency.map(v=>sortedArr.indexOf(v)+1);
+}
 
 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
