@@ -24,7 +24,25 @@ function solution(num_list, n) {
 }
 
 
-3. 배열 회전시키기
+3. 공 던지기
+
+
+function solution(numbers, k) {
+  let ansIndex = 0;
+  
+  for(let i = 0; i < k; i++){
+      ansIndex += 2;    
+      
+      if(ansIndex > numbers.length){
+          ansIndex -= numbers.length;
+      }
+  }
+  
+  return numbers[ansIndex - 2];
+}
+
+
+4. 배열 회전시키기
 
 function solution(numbers, reverse) {
   if (reverse === "right") numbers.unshift(numbers.pop());
