@@ -1,6 +1,5 @@
 1. 개미군단
 
-
 function solution(hp) {
   let a = 5
   let b = 3
@@ -42,5 +41,32 @@ function solution(rsp) {
   return answer
 }
 
+3. 모스 부호(1)
+
+function solution(letter) {
+  morse = { 
+    '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
+    '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
+    '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
+    '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
+    '-.--':'y','--..':'z'
+  }
+  return letter.split(" ").map(a => morse[a]).join("")
+}
+
+4. 구슬을_나누는_경우의 수
+
+function solution(balls, share) {
+  // 서로 다른 n개 중 m개를 뽑는 경우의 수 공식
+  return factorial(balls) / (factorial((balls-share)) * factorial(share))
+}
+// 팩토리얼을 구하는 함수
+function factorial(num) {
+  let returnFactorial = BigInt(1) // bigint써서 범위 지정
+  for(let i = num; i >= 2; i-- ) {
+      returnFactorial*=BigInt(i)
+  }
+  return returnFactorial
+}
 
 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
