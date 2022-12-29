@@ -35,4 +35,18 @@ function solution(n) {
 }
 
 
+4. 영어가 싫어요
+
+
+function solution(numbers) {
+  const nums = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+
+  nums.forEach((item, index) => {
+      numbers = numbers.split(item).join(String(index));
+  })
+  
+  return Number(numbers);
+}
+
+
 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
