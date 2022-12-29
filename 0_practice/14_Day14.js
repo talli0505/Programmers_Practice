@@ -39,4 +39,29 @@ function solution(my_string) {
   return answer
 }
 
+
+4. 가까운 수
+
+function solution(array, n) {
+  let answer = [];
+  
+  array.forEach((a) => {
+      answer.push(Math.abs(a - n));
+  })
+  
+  const min = Math.min(...answer);
+  
+  let check = [];
+  
+  for(let i = 0; i < answer.length; i++){
+      if(answer[i] === min){
+          check.push(array[i]);
+      }
+  }
+  
+  return Math.min(...check);
+}
+
+
+
 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
