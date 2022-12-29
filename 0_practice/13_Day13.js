@@ -29,4 +29,13 @@ function solution(sides) {
   }
 }
 
+4. 컨트롤 제트
+
+function solution(s) {
+  const arr = s.split(' ')
+  while(arr.includes('Z')) arr.splice(arr.indexOf('Z') - 1,2);
+  return arr.map(a => +a).reduce((b,c) => b+c, 0)
+}
+
+
 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
