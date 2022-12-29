@@ -39,5 +39,28 @@ function solution(my_string) {
   return answer
 }
 
+4. 소인수분해
+
+
+function solution(n) {
+  let prime = [];
+
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+      while (n % i === 0) {
+          prime.push(i);
+          
+          n /= i;
+      }
+  }
+  
+  if(n >= 2){
+      prime.push(n);    
+  }
+  
+  let ans = Array.from(new Set(prime));
+  
+  return ans.sort((a,b) => a - b);
+}
+
 
 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
