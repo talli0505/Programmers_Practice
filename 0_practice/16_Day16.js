@@ -33,5 +33,11 @@ function solution(s1, s2) {
   return count
 }
 
+4. 문자열 계산하기
+
+function solution(my_string) {
+  return eval(my_string)
+}
+
 
 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
