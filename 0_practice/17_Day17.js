@@ -34,5 +34,14 @@ function solution(n) {
   return n.toString().split("").reduce((a,b) => a += Number(b), 0)
 }
 
+4. OX 퀴즈
+
+function solution(quiz) {
+  return quiz.map(a => {
+    const [question, answer] = a.split("=");
+    return eval(question) === +answer ? 'O' : 'X';
+  })
+}
+
 
 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
