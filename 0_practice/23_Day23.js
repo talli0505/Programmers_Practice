@@ -26,3 +26,5 @@ function solution(id_pw, db) {
   if(!db.find(([ids]) => ids === id)) return 'fail';
   return db.find(([ids, pws]) => ids === id && pws === pw) ? 'login' : 'wrong pw';
 }
+
+출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
